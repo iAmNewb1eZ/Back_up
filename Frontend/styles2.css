@@ -1,0 +1,35 @@
+@font-face {
+    font-family: "kanit";
+    src: url("./Kanit/Kanit-Regular.ttf");
+  }
+  body {
+    font-family: "kanit";
+    margin: 0;
+    padding: 0;
+    display: flex;
+    background-image: url("https://www.greatwallofmemes.com/wp-content/uploads/2020/08/pointing.jpg");
+    background-size: cover;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    color: #333;
+}
+
+.back-link {
+    color: #007bff;
+    font-size : 50px;
+    text-decoration: underline;
+}
+
+
+
+
