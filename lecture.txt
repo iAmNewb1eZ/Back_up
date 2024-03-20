@@ -8,7 +8,7 @@ docker pull phpmyadmin/phpmyadmin
 docker images
 docker network create web
 docker network ls
-docker run --name (ชื่อของmysql mysql) --network (ชื่อเน็ตเวิร์ค web) -e MYSQL_ROOT_PASSWORD=1111 -e MYSQL_DATABASE=web_db -e MYSQL_USER=(ตั้งชื่อuser wordpress) -e MYSQL_PASSWORD=(ตั้งpassword wordpress) -d mysql:5.7
+docker run --name mysql --network web -e MYSQL_ROOT_PASSWORD=1111 -e MYSQL_DATABASE=web_db -e MYSQL_USER=wordpress -e MYSQL_PASSWORD=wordpress -d mysql:5.7
 docker run --name pma --network web -p 8888:80 -e PMA_ARBITRARY=1 -d phpmyadmin/phpmyadmin
 
 docker-compose up
