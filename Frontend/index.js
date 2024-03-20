@@ -105,16 +105,16 @@ try{
         }
     }
     let message= 'บันทึกข้อมูลสำเร็จ'
-    if(mode=='CREATE'){
-    const response= await axios.post(`${BASE_URL}/users`,userData)
-    console.log('response',response.data);
-    }else{
-     const response= await axios.put(`${BASE_URL}/users/${selectedId}`,userData)
-     message='แก้ไขข้อมูลเรียบร้อย'
-     console.log('response',response.data);
-    }
+        if(mode=='CREATE'){
+        const response= await axios.post(`${BASE_URL}/users`,userData)
+        console.log('response',response.data);
+        }else{
+        const response= await axios.put(`${BASE_URL}/users/${selectedId}`,userData)
+        message='แก้ไขข้อมูลเรียบร้อย'
+        console.log('response',response.data);
+        }
 
-    messageDOM.innerText=message
+    messageDOM.innerText= message
     messageDOM.className='message success'
 }catch(error){
     console.log('error message',error.message)
