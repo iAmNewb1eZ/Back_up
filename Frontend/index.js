@@ -29,7 +29,7 @@ window.onload = async () => {
                 }
             }
 
-            let interestDOM = document.querySelectorAll('input[name=interests]')
+            let interestDOM = document.querySelectorAll('input[name=interest]')
             for(let i = 0; i < interestDOM.length ; i++){
                 if(user.interests.includes(interestDOM[i].value)){
                     interestDOM[i].checked = true
@@ -72,7 +72,7 @@ const submitData = async  () => {
     let ageDOM = document.querySelector('input[name=age]')
 
     let genderDOM = document.querySelector('input[name=gender]:checked')||{}
-    let interestDOM = document.querySelectorAll('input[name=interests]:checked')||{}
+    let interestDOM = document.querySelectorAll('input[name=interest]:checked')||{}
     let descriptionDOM = document.querySelector('textarea[name=description]')
 
     let messageDOM = document.getElementById('message')
